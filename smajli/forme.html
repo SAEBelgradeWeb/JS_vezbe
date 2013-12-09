@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Forme</title>
+	</head>
+	<body>
+	<!-- 	<form> -->
+			
+			<label for="ime">Ime:</label> <input type="text" id="ime" name="ime" value="" placeholder="Molim vas unesite ovde vase ime"><span id="ime_w" style="color: red; display: none;">Molim vas popunite ovo polje</span><br>
+	
+			<label for="prezime">Prezime:</label> <input type="text" id="prezime" name="prezime" value="" placeholder="Molim vas unesite ovde vase prezime"><br>
+
+			<label for="pol">Kog ste tacno pola:</label> <br>
+
+			Muski <input type="radio" name="pol" value="muski">
+			Zenski <input type="radio" name="pol" value="zenski">
+			Srednji <input type="radio" name="pol" value="srednji"><br>
+
+			<label for="spam">Da li zelite da primate nas spam?</label> <br>
+			O automobilima <input type="checkbox" name="spam" >
+			O Niceu <input type="checkbox" name="spam">
+			O najnovijim turskim serijama <input type="checkbox" name="spam">
+			<br>
+
+			<label for="grad">Iz kog ste grada?</label> 
+			<select name="grad" id="grad">
+				<option value="">--------</option>
+				<option value="bgd">Beograd</option>
+				<option value="nis">Nis</option>
+				<option value="ns">Novi Sad</option>
+
+			</select>
+			<br>
+
+			<label for="comment">Ostavite nam komentar</label>
+			<textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+			Sifra <input type="password" id="sifra"><br>
+			Sifra repriza <input type="password" id="sifra2"><br>
+
+			Email <input type="email" name="email" id="email" ><br>
+
+			Godiste <input type="number" name="god" id="god" ><br>
+
+
+			<button onclick="validiraj();">Submit</button>
+
+		<!-- </form> -->
+
+		<script src="script.js"></script>
+	</body>
+</html>

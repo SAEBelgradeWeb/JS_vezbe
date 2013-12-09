@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS1</title>
+		<style>
+		body {
+			text-align: center;
+		}
+		</style>
+
+		<script type="text/javascript">
+		var username;
+
+		function hello(){
+			if (username) {
+				alert("hello again" + username + "!!");
+			} else {
+				username = prompt("hello!! what's your name??")
+				if (username) {
+					alert('Hello, ' + username + "..nice to meet you!!");
+				}
+			}
+		}
+
+		function smile(){
+			document.getElementById('smajli').src = "images/myFace_smile.png";
+			document.getElementById('smileText').innerHTML = "Ponovo sam srecan";
+		}
+
+		function frown(){
+			document.getElementById('smajli').src = "images/myFace.png";
+			document.getElementById('smileText').innerHTML = "Uuuu nisam vise srecan";
+		}
+
+		</script>
+
+	</head>
+	<body>
+		<img src="images/myFace.png" alt="" onclick="smile();" id="smajli">
+		<a href="javascript:hello();">Hello</a>
+		<p id="smileText"></p>
+		<p><a href="javascript:frown();">reset</a></p>
+	</body>
+</html>
