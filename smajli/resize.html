@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<title>resize</title>
+		<link rel="stylesheet" href="images/resize.css">
+		<script>
+		function izmeri(){
+			var w = window.innerWidth;
+			var h = window.innerHeight;
+
+			document.getElementById('sirina').innerHTML = "Sirina: " + w + "px";
+			document.getElementById('visina').innerHTML = "Visina: " + h + "px";
+
+		}
+
+
+		</script>
+	</head>
+	<body onresize="izmeri();">
+		<div id="sirina">100px</div>
+		<div id="visina">300px</div>
+		<script>
+		izmeri();
+		</script>
+	</body>
+</html>

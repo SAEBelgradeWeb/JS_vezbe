@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Animirani div</title>
+		<link rel="stylesheet" href="animiranidvi.css">
+
+	</head>
+	<body>
+
+		<div id="box" style="top: 1px; left: 1px;" onclick="zaustavi();">
+				<img src="images/myFace.png" alt="">
+		</div>
+	
+
+
+
+	<script>
+	var tajmerLevo;
+
+		function mrdniSeDesno(){
+
+			var left_pozicija,
+				top_pozicija,
+				box = document.getElementById('box');
+
+			left_pozicija = parseInt(box.style.left);
+			left_pozicija+= 12;
+			box.style.left = left_pozicija + "px";
+
+			if (left_pozicija >= (window.innerWidth - 200) ) {
+				clearInterval(tajmerDesno);
+				 tajmerLevo = setInterval('mrdniSeLevo()', 10);
+			}
+
+		}
+
+
+		var tajmerDesno = setInterval('mrdniSeDesno()', 10);
+		//mrdniSe();
+
+		function mrdniSeLevo(){
+
+			var left_pozicija,
+				top_pozicija,
+				box = document.getElementById('box');
+
+			left_pozicija = parseInt(box.style.left);
+			left_pozicija-= 12;
+			box.style.left = left_pozicija + "px";
+
+			if (left_pozicija <= 0 ) {
+				clearInterval(tajmerLevo);
+				tajmerDesno = setInterval('mrdniSeDesno()', 10);
+			}
+
+		}
+
+
+		function zaustavi() {
+			clearInterval(tajmerDesno);
+			clearInterval(tajmerLevo);
+		}
+
+		</script>
+	</body>
+</html>
